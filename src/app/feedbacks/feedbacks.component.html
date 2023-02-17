@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="heading">Our Customer Feedbacks</div>
+    <div class="emptyfeed" *ngIf="getFeedbacks.length == 0">"We Belive that Legends will initiate The Great things". Lets share your feedback now!</div>
+
+    <div class="row">
+        <div class="column card" *ngFor="let data of getFeedbacks" >
+            <div class="card-header">{{data.name}}</div>
+            <div class="card-body">{{data.message}}</div>
+        </div>
+    </div>
+
+</div>

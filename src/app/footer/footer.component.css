@@ -1,0 +1,15 @@
+.container{
+    background-color: darkslategrey;
+  
+}
+.center {
+    text-align: center;
+    padding: 40px;
+    color: white;
+  }
+
+  @media(max-width:450px){
+      .container{
+          width: 600px !important;
+      }
+  }

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="left">
+                <div class="para-1">
+                    <p>Feedback</p>
+                </div>
+                <div class="form-sec">
+                    <form [formGroup]="formdata" (ngSubmit)="Onpost( )" >
+                        <div class="form-group">
+                          <input type="name" class="form-control" formControlName="name" id="email" placeholder="Enter your Name" [(ngModel)]="costomerName" name="email">
+                          <br>
+                          <!-- error msg -->
+                          <span class="noinput" *ngIf="userName && userName.invalid && userName.touched">Please Enter Your Name</span> 
+                        </div>
+                        <div class="form-group">
+                          <input type="email" class="form-control" formControlName="email" id="pwd" placeholder="Enter your email adderess" name="pswd">
+                          <br>
+                          <!-- error msg -->
+                          <span class="noinput" *ngIf="userEmail && userEmail.invalid && userEmail.touched">Please Enter Your Email </span> 
+                        </div>
+                        <div class="form-group">
+                           <textarea rows="5" formControlName="message" placeholder="Enter your message"></textarea>
+                           <br>
+                           <!-- error msg -->
+                           <span class="noinput" *ngIf="userMessage && userMessage.invalid && userMessage.touched">Please Enter Your Feedback more than 10 letters</span> 
+                          </div>
+                          <div class=" form-group but">
+                              <button class="btn" id="view" type="submit" [disabled]="formdata.invalid">POST </button>
+                          </div>
+                    </form>   
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+           <div class="right">
+                <a href=""><img class="pic" src="./assets/images/form-model.png"></a>
+           </div>
+        </div>
+    </div>
+</div>

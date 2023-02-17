@@ -1,0 +1,29 @@
+.container{
+    background-color: black; 
+    padding-bottom: 20px;
+}
+.heading{
+    color: #fff;
+    text-align: center;
+    font-size: 52px !important;
+    font-family: Playfair Display, serif !important;
+}
+.emptyfeed{color:#fff; text-align: center; font-style: italic; text-decoration: dotted;}
+.card-deck{ justify-content: center;}
+.card{background-color: transparent; color: #fff;   border-radius: 10px;box-shadow: 0px 0px 8px 0px rgba(240, 235, 235, 1);}
+.card .card-header{font-weight: bold; text-align: center;}
+.card .card-body{font-style: italic;}
+.column{float: left;width: 31%;padding: 10px;margin-left: 20px;margin-top: 10px}
+@media(max-width:550px){
+   
+    .container{
+        width: 600px;
+    }
+    .card-deck{
+        margin-left: 120px;
+    }
+    .column{
+        width: 45%;
+    }
+     
+  }
